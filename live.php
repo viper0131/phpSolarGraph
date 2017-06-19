@@ -334,7 +334,7 @@
 					enabled: false
 				},
 				title: {
-				    text: 'Power dashboard'
+				    text: 'Power Dashboard'
 				},
 				pane: [{
 				    startAngle: -45,

@@ -61,8 +61,8 @@ if ($USE_INVERTOR) {
 $yl_actual_yield = 0;
 if ($USE_YOULESS) {
         curl_setopt( $curl_handle, CURLOPT_COOKIESESSION, true );
-        curl_setopt( $curl_handle, CURLOPT_COOKIEJAR, /tmp/koekje );
-        curl_setopt( $curl_handle, CURLOPT_COOKIEFILE, /tmp/koekje );
+        curl_setopt( $curl_handle, CURLOPT_COOKIEJAR, '/tmp/koekje' );
+        curl_setopt( $curl_handle, CURLOPT_COOKIEFILE, '/tmp/koekje' );
 	$outputyouless = file_get_contents('http://82.95.120.155:8888/L?w=""'); 
 	$outputyouless = file_get_contents('http://82.95.120.155:8888/a?f=j'); 
 	$json = json_decode($outputyouless); 

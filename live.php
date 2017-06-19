@@ -506,6 +506,198 @@
 				}]		    
 			});
 			
+			chartDCiFases = new Highcharts.Chart({
+    
+				chart: {
+				    renderTo: 'DciFasesCauche',
+				    type: 'gauge',
+				    plotBorderWidth: 1,
+				    plotBackgroundColor: {
+					linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+					stops: [
+					    [0, '#FFF4C6'],
+					    [0.3, '#FFFFFF'],
+					    [1, '#FFF4C6']
+					]
+				    },
+				    plotBackgroundImage: null,
+				    height: 160
+				},			    
+				credits: {
+					enabled: false
+				},
+				title: {
+				    text: 'DC I'
+				},
+				pane: [{
+				    startAngle: -45,
+				    endAngle: 45,
+				    background: null,
+				    center: ['17%', '125%'],
+				    size: 180
+				}, {
+				    startAngle: -45,
+				    endAngle: 45,
+				    background: null,
+				    center: ['50%', '125%'],
+				    size: 180
+				}, {
+				    startAngle: -45,
+				    endAngle: 45,
+				    background: null,
+				    center: ['83%', '125%'],
+				    size: 180
+				}],                        			    
+				yAxis: [{
+				    
+				    min: 0,
+				    max: 5,
+				    minorTickPosition: 'outside',
+				    tickPosition: 'outside',
+				    labels: {
+					rotation: 'auto',
+					distance: 20
+				    },
+				    plotBands: [{
+					from: 0,
+					to: 200,
+					color: '#C02316',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 200,
+					to: 500,
+					color: '#FFA500',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 500,
+					to: 2000,
+					color: '#008000',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    }
+				    ],
+				    pane: 0,
+				    title: {
+					text: 'DC i 1<span style="font-size:10px">(Amp)</span>',
+					y: -20
+				    }
+				}, {
+				    
+				    min: 0,
+				    max: 5,
+				    minorTickPosition: 'outside',
+				    tickPosition: 'outside',
+				    labels: {
+					rotation: 'auto',
+					distance: 20
+				    },
+				    plotBands: [{
+					from: 0,
+					to: 200,
+					color: '#C02316',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 200,
+					to: 500,
+					color: '#FFA500',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 500,
+					to: 2000,
+					color: '#008000',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    }
+				    ],
+				    pane: 1,
+				    title: {
+					text: 'DC i 2<span style="font-size:10px">(Amp)</span>',
+					y: -20
+				    }
+				},{
+				    
+				    min: 0,
+				    max: 5,
+				    minorTickPosition: 'outside',
+				    tickPosition: 'outside',
+				    labels: {
+					rotation: 'auto',
+					distance: 20
+				    },
+				    plotBands: [{
+					from: 0,
+					to: 200,
+					color: '#C02316',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 200,
+					to: 500,
+					color: '#FFA500',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    },{
+					from: 500,
+					to: 2000,
+					color: '#008000',
+					innerRadius: '100%',
+					outerRadius: '105%'
+				    }
+				    ],
+				    pane: 2,
+				    title: {
+					text: 'DC i 3<span style="font-size:10px">(Amp)</span>',
+					y: -20
+				    }
+				}],
+				plotOptions: {
+				    gauge: {
+					dataLabels: {
+					    enabled: true
+					},
+					dial: {
+					    radius: '100%'
+					}
+				    }
+				},			    
+				series: [{
+				    data: [0],
+				    dataLabels: {
+				        y: -50,	
+                			formatter: function () {
+                    				var value = this.y;
+                    				return '<span style="color:#339">'+ value + '</span><br/>';
+                			},
+				    },
+				    yAxis: 0
+				}, {
+				    data: [0],
+				    dataLabels: {
+				        y: -50,	
+                			formatter: function () {
+                    				var value = this.y;
+                    				return '<span style="color:#339">'+ value + '</span><br/>';
+                			},
+				    },
+				    yAxis: 1,
+				    tooltip: {valueSuffix: ' Watt'}
+				}, {
+				    data: [0],
+				    dataLabels: {
+				        y: -50,	
+                			formatter: function () {
+                    				var value = this.y;
+                    				return '<span style="color:#339">'+ value + '</span><br/>';
+                			},
+				    },
+				    yAxis: 2,
+				    tooltip: {valueSuffix: ' Watt'}
+				}]		    
+			});
 			chartACFases = new Highcharts.Chart({
     
 				chart: {
@@ -699,198 +891,6 @@
 				}]		    
 			});
 			
-			chartDCiFases = new Highcharts.Chart({
-    
-				chart: {
-				    renderTo: 'DciFasesCauche',
-				    type: 'gauge',
-				    plotBorderWidth: 1,
-				    plotBackgroundColor: {
-					linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-					stops: [
-					    [0, '#FFF4C6'],
-					    [0.3, '#FFFFFF'],
-					    [1, '#FFF4C6']
-					]
-				    },
-				    plotBackgroundImage: null,
-				    height: 160
-				},			    
-				credits: {
-					enabled: false
-				},
-				title: {
-				    text: 'DC I'
-				},
-				pane: [{
-				    startAngle: -45,
-				    endAngle: 45,
-				    background: null,
-				    center: ['17%', '125%'],
-				    size: 180
-				}, {
-				    startAngle: -45,
-				    endAngle: 45,
-				    background: null,
-				    center: ['50%', '125%'],
-				    size: 180
-				}, {
-				    startAngle: -45,
-				    endAngle: 45,
-				    background: null,
-				    center: ['83%', '125%'],
-				    size: 180
-				}],                        			    
-				yAxis: [{
-				    
-				    min: 0,
-				    max: 5,
-				    minorTickPosition: 'outside',
-				    tickPosition: 'outside',
-				    labels: {
-					rotation: 'auto',
-					distance: 20
-				    },
-				    plotBands: [{
-					from: 0,
-					to: 200,
-					color: '#C02316',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 200,
-					to: 500,
-					color: '#FFA500',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 500,
-					to: 2000,
-					color: '#008000',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    }
-				    ],
-				    pane: 0,
-				    title: {
-					text: 'DC i 1<span style="font-size:10px">(Amp)</span>',
-					y: -20
-				    }
-				}, {
-				    
-				    min: 0,
-				    max: 5,
-				    minorTickPosition: 'outside',
-				    tickPosition: 'outside',
-				    labels: {
-					rotation: 'auto',
-					distance: 20
-				    },
-				    plotBands: [{
-					from: 0,
-					to: 200,
-					color: '#C02316',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 200,
-					to: 500,
-					color: '#FFA500',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 500,
-					to: 2000,
-					color: '#008000',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    }
-				    ],
-				    pane: 1,
-				    title: {
-					text: 'DC i 2<span style="font-size:10px">(Amp)</span>',
-					y: -20
-				    }
-				},{
-				    
-				    min: 0,
-				    max: 5,
-				    minorTickPosition: 'outside',
-				    tickPosition: 'outside',
-				    labels: {
-					rotation: 'auto',
-					distance: 20
-				    },
-				    plotBands: [{
-					from: 0,
-					to: 200,
-					color: '#C02316',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 200,
-					to: 500,
-					color: '#FFA500',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    },{
-					from: 500,
-					to: 2000,
-					color: '#008000',
-					innerRadius: '100%',
-					outerRadius: '105%'
-				    }
-				    ],
-				    pane: 2,
-				    title: {
-					text: 'DC i 3<span style="font-size:10px">(Amp)</span>',
-					y: -20
-				    }
-				}],
-				plotOptions: {
-				    gauge: {
-					dataLabels: {
-					    enabled: true
-					},
-					dial: {
-					    radius: '100%'
-					}
-				    }
-				},			    
-				series: [{
-				    data: [0],
-				    dataLabels: {
-				        y: -50,	
-                			formatter: function () {
-                    				var value = this.y;
-                    				return '<span style="color:#339">'+ value + '</span><br/>';
-                			},
-				    },
-				    yAxis: 0
-				}, {
-				    data: [0],
-				    dataLabels: {
-				        y: -50,	
-                			formatter: function () {
-                    				var value = this.y;
-                    				return '<span style="color:#339">'+ value + '</span><br/>';
-                			},
-				    },
-				    yAxis: 1,
-				    tooltip: {valueSuffix: ' Watt'}
-				}, {
-				    data: [0],
-				    dataLabels: {
-				        y: -50,	
-                			formatter: function () {
-                    				var value = this.y;
-                    				return '<span style="color:#339">'+ value + '</span><br/>';
-                			},
-				    },
-				    yAxis: 2,
-				    tooltip: {valueSuffix: ' Watt'}
-				}]		    
-			});
 
 			clock = new Highcharts.Chart({
 				chart: {
